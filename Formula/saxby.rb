@@ -1,39 +1,41 @@
-# Template. The release workflow fills in 0.9.5 and the
+# Template. The release workflow fills in 0.9.6 and the
 # @SHA256_*@ checksums and attaches the result to the release, so
 # this file is never edited by hand per release.
 #
 # Keeps a service block, as Homebrew formulae do. `brew services` and
 # `saxby service install` are two supervisors for one port; running
 # both is user error, and the second one to start says so loudly.
+#
+# No `version` line: brew reads the version from the download URLs,
+# and `brew audit --strict` flags one that repeats it.
 class Saxby < Formula
   BASE = "https://github.com/saxby-tools/saxby/releases/download".freeze
 
   desc "Local-first LLM routing daemon"
   homepage "https://github.com/saxby-tools/saxby"
-  version "0.9.5"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "#{BASE}/v0.9.5/saxby-0.9.5-darwin-arm64.tar.gz"
-      sha256 "fea243956786f834bd185a8d543ef1b606fade6cf3bb8071dc0f84d4b16cbacc"
+      url "#{BASE}/v0.9.6/saxby-0.9.6-darwin-arm64.tar.gz"
+      sha256 "45008bcbaa20d277a7d1d9313a8264e437a194e3d39d66b1cd4226c100a7cfea"
     end
 
     on_intel do
-      url "#{BASE}/v0.9.5/saxby-0.9.5-darwin-x64.tar.gz"
-      sha256 "778f05f79d2e6dadf74feb9639de1ed281a02f7aafda3ab583b32a8335aae8c3"
+      url "#{BASE}/v0.9.6/saxby-0.9.6-darwin-x64.tar.gz"
+      sha256 "84a92a7b61e98149e887bfae596ffc6ea06d9281dce7fd9e708d8d90caf4c5ff"
     end
   end
 
   on_linux do
     on_arm do
-      url "#{BASE}/v0.9.5/saxby-0.9.5-linux-arm64.tar.gz"
-      sha256 "47f82c92d8435193fcb01dbfc50d5bc626cf7b62f03bf0c2136e4ec5bf04963e"
+      url "#{BASE}/v0.9.6/saxby-0.9.6-linux-arm64.tar.gz"
+      sha256 "181ee475f54016ee04212b1ed448f12647568f21ac909a5c8ad82b2b6e080146"
     end
 
     on_intel do
-      url "#{BASE}/v0.9.5/saxby-0.9.5-linux-x64.tar.gz"
-      sha256 "3d513fefa15a6dc87ec2dfc69fc6d77833e81d821b3562203a41800a73738cd0"
+      url "#{BASE}/v0.9.6/saxby-0.9.6-linux-x64.tar.gz"
+      sha256 "1beecfb148b4b3d7f5e04db4affb5ae5a09416b9c705a5f4129a96b2d5bf7517"
     end
   end
 
