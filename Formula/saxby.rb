@@ -1,4 +1,4 @@
-# Template. The release workflow fills in 0.9.9 and the
+# Template. The release workflow fills in 0.9.10 and the
 # @SHA256_*@ checksums and attaches the result to the release, so
 # this file is never edited by hand per release.
 #
@@ -17,25 +17,25 @@ class Saxby < Formula
 
   on_macos do
     on_arm do
-      url "#{BASE}/v0.9.9/saxby-0.9.9-darwin-arm64.tar.gz"
-      sha256 "89ae0169dd2aef161a392ceda9032e625108c713d64d30120f73ba7d404758ac"
+      url "#{BASE}/v0.9.10/saxby-0.9.10-darwin-arm64.tar.gz"
+      sha256 "56e47b74692da851587f155a3db92b479f1e61b833df9e991abc28c7194ae9cc"
     end
 
     on_intel do
-      url "#{BASE}/v0.9.9/saxby-0.9.9-darwin-x64.tar.gz"
-      sha256 "1c9b575dcab045156fe6b9ec5dab03571ff30eec48dd8c60f92b9e15a3fb03ff"
+      url "#{BASE}/v0.9.10/saxby-0.9.10-darwin-x64.tar.gz"
+      sha256 "63dfc3649d799f6ad878bce96f47dfdfb0a1b9b8b3deee01bc76d9569e60cd7a"
     end
   end
 
   on_linux do
     on_arm do
-      url "#{BASE}/v0.9.9/saxby-0.9.9-linux-arm64.tar.gz"
-      sha256 "657b1a9860f87abfb1cbe3c4e7ce3432c5832b86b128ec1ce04a4efe78e3f5bc"
+      url "#{BASE}/v0.9.10/saxby-0.9.10-linux-arm64.tar.gz"
+      sha256 "e53a5d7b84d2bebe8d9e8142f4f125b6153593a0aeb3d74761a644f0be713737"
     end
 
     on_intel do
-      url "#{BASE}/v0.9.9/saxby-0.9.9-linux-x64.tar.gz"
-      sha256 "dadbcf0ac94edd23f7d59fcc423d26230f67676c8a1a9af230f51c17041e7cce"
+      url "#{BASE}/v0.9.10/saxby-0.9.10-linux-x64.tar.gz"
+      sha256 "f3a39031c95f8b8c0914b992a999d5f6e0081873d45acd828c4e779b72d7ca61"
     end
   end
 
